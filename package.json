@@ -14,7 +14,7 @@
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "author": "Rajesh Rakshit",
-  "license": "ISC",
+  
   "dependencies": {
     "async": "^3.1.0",
     "bcrypt": "^3.0.6",
