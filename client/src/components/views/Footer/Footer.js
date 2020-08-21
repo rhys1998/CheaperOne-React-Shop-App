@@ -8,7 +8,9 @@ function Footer() {
             flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', fontSize:'1rem'
         }}>
-           <p> Happy Coding  <Icon type="smile" /></p>
+           <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=i.r.rakshit@gmail.com" target='_blank'>
+                    Send Feedback
+            </a>
         </div>
     )
 }
