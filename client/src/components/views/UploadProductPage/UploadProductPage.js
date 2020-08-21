@@ -21,7 +21,7 @@ function UploadProductPage(props) {
     const [TitleValue, setTitleValue] = useState("")
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [PriceValue, setPriceValue] = useState(0)
-    const [ContinentValue, setContinentValue] = useState(1)
+    const [CategoryValue, setCategoryValue] = useState(1)
 
     const [Images, setImages] = useState([])
 
@@ -39,7 +39,7 @@ function UploadProductPage(props) {
     }
 
     const oncategorySelectChange = (event) => {
-        setContinentValue(event.currentTarget.value)
+        setCategoryValue(event.currentTarget.value)
     }
 
     const updateImages = (newImages) => {
@@ -50,7 +50,7 @@ function UploadProductPage(props) {
 
 
         if (!TitleValue || !DescriptionValue || !PriceValue ||
-            !ContinentValue || !Images) {
+            !CategoryValue || !Images) {
             return alert('fill all the fields first!')
         }
 
@@ -60,7 +60,7 @@ function UploadProductPage(props) {
             description: DescriptionValue,
             price: PriceValue,
             images: Images,
-            category: ContinentValue,
+            category: CategoryValue,
         }
 
         Axios.post('/api/product/uploadProduct', variables)
@@ -110,7 +110,7 @@ function UploadProductPage(props) {
                     type="number"
                 />
                 <br /><br />
-                <select onChange={oncategorySelectChange} value={ContinentValue}>
+                <select onChange={oncategorySelectChange} value={CategoryValue}>
                     {category.map(item => (
                         <option key={item.key} value={item.key}>{item.value} </option>
                     ))}
