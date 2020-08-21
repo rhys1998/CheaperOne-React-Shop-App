@@ -11,9 +11,9 @@ const category = [
     { key: 2, value: "Laptops" },
     { key: 3, value: "Books" },
     { key: 4, value: "Calculators" },
-    { key: 5, value: "Others" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+    { key: 5, value: "Mechanical Instruments" },
+    { key: 6, value: "Brand new Club Tshirts" },
+    { key: 7, value: "Others" }
 ]
 
 function UploadProductPage(props) {
@@ -103,7 +103,7 @@ function UploadProductPage(props) {
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>Price(Rs)</label>
                 <Input
                     onChange={onPriceChange}
                     value={PriceValue}
