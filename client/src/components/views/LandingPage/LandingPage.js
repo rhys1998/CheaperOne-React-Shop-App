@@ -144,7 +144,7 @@ function LandingPage() {
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>  The cheaper alternative  <Icon type="rocket" />  </h2>
+                <h2>  A cheaper alternative  <Icon type="rocket" />  </h2>
             </div>
 
 
