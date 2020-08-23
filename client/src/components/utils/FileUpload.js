@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Dropzone from 'react-dropzone';
 import { Icon } from 'antd';
-import Axios from 'axios';
+
 import S3 from 'react-aws-s3';
 
 function FileUpload(props) {
@@ -11,9 +11,7 @@ function FileUpload(props) {
     const onDrop = (files) => {
 
         let formData = new FormData();
-        const config = {
-            header: { 'content-type': 'multipart/form-data' }
-        }
+        
 
         const config2 = {
             bucketName: 'cheaperone',
