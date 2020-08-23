@@ -25,8 +25,12 @@ function FileUpload(props) {
 
 
         const ReactS3Client = new S3(config2);
- 
-        const newFileName = 'test-file';
+
+        const uuidv4 = require('uuid/v4'); // lets chose v4 
+        
+        var newFileName = uuidv4();
+         
+        
  
 ReactS3Client
     .uploadFile(files[0], newFileName)
