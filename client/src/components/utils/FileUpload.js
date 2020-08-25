@@ -17,8 +17,8 @@ function FileUpload(props) {
             bucketName: 'cheaperone',
             dirName: 'media', /* optional */
             region: 'ap-south-1',
-            accessKeyId: 'AKIAJ4QVQCNWXRBCIJGA',
-            secretAccessKey: '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',
+            accessKeyId: 'AKIAISQN4MFP4PUGSQYQ',
+            secretAccessKey: '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',
         }
 
 
