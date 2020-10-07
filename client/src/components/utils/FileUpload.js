@@ -4,11 +4,6 @@ import { Icon } from 'antd';
 import S3 from 'react-aws-s3';
 
 function FileUpload(props) {
-
-    console.log(process.env.REACT_APP_CLIENT_ID); 
-    console.log(process.env.REACT_APP_KEY);
-
-
     const [Images, setImages] = useState([])
 
     const onDrop = (files) => {
@@ -20,8 +15,8 @@ function FileUpload(props) {
             bucketName: 'cheaperone',
             dirName: 'media', /* optional */
             region: 'ap-south-1',
-            accessKeyId: 'AKIAJL4KHZHDHSHRVDYA',
-            secretAccessKey: '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',
+            accessKeyId: process.env.REACT_APP_CLIENT_ACCESS_KEY_ID,
+            secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY,
         }
 
 
