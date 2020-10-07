@@ -11,13 +11,13 @@ function FileUpload(props) {
         let formData = new FormData();
         
 
-        // const config2 = {
-        //     bucketName: 'cheaperone',
-        //     dirName: 'media', /* optional */
-        //     region: 'ap-south-1',
-        //     accessKeyId: process.env.REACT_APP_CLIENT_ACCESS_KEY_ID,
-        //     secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY,
-        // }
+        const config2 = {
+            bucketName: 'cheaperone',
+            dirName: 'media', /* optional */
+            region: 'ap-south-1',
+            accessKeyId: process.env.REACT_APP_CLIENT_ACCESS_KEY_ID,
+            secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY,
+        }
 
 
         const ReactS3Client = new S3(config2);
