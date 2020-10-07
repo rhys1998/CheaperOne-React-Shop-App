@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Dropzone from 'react-dropzone';
 import { Icon } from 'antd';
-
 import S3 from 'react-aws-s3';
 
 function FileUpload(props) {
+
+    console.log(process.env.REACT_APP_CLIENT_ID); 
+    console.log(process.env.REACT_APP_KEY);
+
 
     const [Images, setImages] = useState([])
 
@@ -17,8 +20,8 @@ function FileUpload(props) {
             bucketName: 'cheaperone',
             dirName: 'media', /* optional */
             region: 'ap-south-1',
-            accessKeyId: 'AKIAJ6XGU3FYIWLJ4UJQ',
-            secretAccessKey: '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',
+            accessKeyId: 'AKIAJL4KHZHDHSHRVDYA',
+            secretAccessKey: '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',
         }
 
 
@@ -87,7 +90,7 @@ function FileUpload(props) {
                 
                 {
                 Images.map((image, index) => (  
-                    <div onClick={() => onDelete(image)}>
+                    <div key={index} onClick={() => onDelete(image)}>
                         <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={image} alt={`productImg-${index}`} />
                     </div>
                 ))}
