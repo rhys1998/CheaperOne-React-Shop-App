@@ -14,7 +14,7 @@ function FileUpload(props) {
         const config2 = {
             bucketName: 'cheaperone',
             dirName: 'media', /* optional */
-            region: 'us-east-2',
+            region: 'ap-south-1',
             accessKeyId: process.env.REACT_APP_CLIENT_ACCESS_KEY_ID,
             secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY,
         }
