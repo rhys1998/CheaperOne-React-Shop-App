@@ -30,13 +30,13 @@ function FileUpload(props) {
          
         
  
-ReactS3Client
-    .uploadFile(files[0], newFileName)
-    .then(data => {
+    ReactS3Client
+        .uploadFile(files[0], newFileName)
+        .then(data => {
         setImages([...Images, data.location])
         props.refreshFunction([...Images, data.location])
-    })
-    .catch(err => console.error(err, "error"))
+        })
+        .catch(err => console.error(err, "error"))
  
   /**
    * {
@@ -47,10 +47,7 @@ ReactS3Client
    *   }
    * }
    */
-
-
-
-        formData.append("file", files[0])
+     formData.append("file", files[0])
     
     }
 
