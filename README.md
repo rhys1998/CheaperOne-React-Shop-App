@@ -1,6 +1,6 @@
 Hello guys 
 
-Its an application where you can put your old items you wanna sell.I made this for my college students..Where we can post our used product items so tht others also get the items at very low cost..
+Its an application where you can put your old items you wanna sell.I made this for my college students..Where we can post our used  product items so tht others also get the items at very low cost..
 
 
 To use this application,
