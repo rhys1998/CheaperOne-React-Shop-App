@@ -3,12 +3,14 @@ import Dropzone from 'react-dropzone';
 import { Icon } from 'antd';
 import S3 from 'react-aws-s3';
 
+
 function FileUpload(props) {
     const [Images, setImages] = useState([])
 
     const onDrop = (files) => {
 
         let formData = new FormData();
+        console.log(REACT_APP_CLIENT_ACCESS_KEY_ID);
         
 
         const config2 = {
