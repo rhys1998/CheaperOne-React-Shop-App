@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Dropzone from 'react-dropzone';
 import { Icon } from 'antd';
-
 import S3 from 'react-aws-s3';
 
 function FileUpload(props) {
-
     const [Images, setImages] = useState([])
 
     const onDrop = (files) => {
@@ -17,8 +15,8 @@ function FileUpload(props) {
             bucketName: 'cheaperone',
             dirName: 'media', /* optional */
             region: 'ap-south-1',
-            accessKeyId: 'AKIAJ6XGU3FYIWLJ4UJQ',
-            secretAccessKey: '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',
+            accessKeyId: process.env.REACT_APP_CLIENT_ACCESS_KEY_ID,
+            secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY,
         }
 
 
@@ -30,13 +28,13 @@ function FileUpload(props) {
          
         
  
-ReactS3Client
-    .uploadFile(files[0], newFileName)
-    .then(data => {
+    ReactS3Client
+        .uploadFile(files[0], newFileName)
+        .then(data => {
         setImages([...Images, data.location])
         props.refreshFunction([...Images, data.location])
-    })
-    .catch(err => console.error(err, "error"))
+        })
+        .catch(err => console.error(err, "error"))
  
   /**
    * {
@@ -47,10 +45,7 @@ ReactS3Client
    *   }
    * }
    */
-
-
-
-        formData.append("file", files[0])
+     formData.append("file", files[0])
     
     }
 
@@ -90,7 +85,7 @@ ReactS3Client
                 
                 {
                 Images.map((image, index) => (  
-                    <div onClick={() => onDelete(image)}>
+                    <div key={index} onClick={() => onDelete(image)}>
                         <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={image} alt={`productImg-${index}`} />
                     </div>
                 ))}
