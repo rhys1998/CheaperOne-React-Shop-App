@@ -10,7 +10,7 @@ function FileUpload(props) {
     const onDrop = (files) => {
 
         let formData = new FormData();
-        console.log(process.env.REACT_APP_CLIENT_ACCESS_KEY_ID);
+        
 
 
         const config2 = {
